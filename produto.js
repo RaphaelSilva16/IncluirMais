@@ -26,7 +26,7 @@
     if (viewerStarted) return;
     viewerStarted = true;
     try {
-      const { mountProductViewer } = await import('./assets/prototype/product-model.bundle.js');
+      const { mountProductViewer } = await import('./product-model.bundle.js');
       await mountProductViewer({ reducedMotion: reducedMotion.matches });
     } catch (error) {
       console.warn('Não foi possível iniciar o visualizador.', error);
