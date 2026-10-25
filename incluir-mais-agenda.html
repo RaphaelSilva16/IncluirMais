@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#18191b" />
+    <meta name="description" content="Conheça a Incluir Mais Agenda: uma proposta de tecnologia assistiva com luzes e sons. Explore o protótipo e personalize uma rotina ilustrativa na demonstração." />
+    <title>Incluir Mais Agenda — Quando o tempo ganha forma</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23c96442'/%3E%3Cpath d='M16 7v18M7 16h18' stroke='%23ffffff' stroke-width='3'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="produto.css" />
+    <link rel="stylesheet" href="assets/prototype/viewer/viewer.css" />
+    <link rel="stylesheet" href="product-opening.css" />
+    <script src="produto.js" defer></script>
+  </head>
+  <body class="product-page sales-page">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="incluirmais, página inicial">
+        <span class="wordmark-mark" aria-hidden="true">+</span>
+        <span>incluir<span class="wordmark-plus">mais</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Navegação da página">
+        <a href="#ideia">Como funciona</a>
+        <a href="#explorar">Experimentar</a>
+        <a href="#prototipo">O protótipo</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-cta" href="index.html">Incluir+</a>
+      </div>
+    </header>
+
+    <main id="conteudo" tabindex="-1">
+      <section class="hero section-shell" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow hero-enter"><span class="status-dot" aria-hidden="true"></span> Tecnologia assistiva em desenvolvimento</p>
+          <h1 id="hero-title"><span class="hero-title-line">Quando o</span> <span class="hero-title-line">tempo ganha</span> <em class="hero-title-line">forma.</em></h1>
+          <p class="hero-deck hero-enter">Uma agenda interativa que transforma momentos da rotina em sinais de luz e som, ajudando a criar referências acessíveis para cada atividade.</p>
+          <p class="hero-audience hero-enter">Pensada principalmente para crianças com transtorno do espectro autista (TEA) e pessoas que precisam de mais previsibilidade nas transições do dia.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#explorar">Explorar o protótipo <span aria-hidden="true">↓</span></a>
+            <a class="button hero-secondary" href="#ideia">Entender como funciona <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <figure class="hero-figure">
+          <div class="hero-image-wrap">
+            <img
+              src="assets/prototype/photos/studio-profissional-lateral.webp"
+              alt="Imagem de apresentação refinada com IA a partir de uma foto do protótipo com painel verde-azulado e extremidades roxa e amarela, topo vermelho, protoboard, cinco LEDs, fios e buzzer."
+              width="1536"
+              height="1024"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </div>
+
+        </figure>
+      </section>
+
+
+      <section id="contexto" class="sales-section sales-context section-shell" aria-labelledby="context-title">
+        <header class="sales-heading" data-reveal><div><p class="eyebrow">01 / O ponto de partida</p><h2 id="context-title">O tempo é o mesmo.<br /><em>As referências, não.</em></h2></div><p class="sales-lead">Entender um horário e reconhecer que chegou a próxima atividade são experiências diferentes. A proposta é tornar essa passagem mais compreensível, respeitando o ritmo de cada pessoa.</p></header>
+        <div class="sales-comparison" data-reveal>
+          <article><p class="sales-kicker">Uma referência convencional</p><strong class="sales-clock">14:30</strong><h3>Um horário para interpretar.</h3><p>Números e ponteiros são referências úteis, mas nem sempre são a forma mais acessível de acompanhar a rotina.</p></article>
+          <span class="sales-translation" aria-hidden="true">→</span>
+          <article class="sales-signal-card"><p class="sales-kicker">Uma possibilidade de associação</p><div class="sales-signal-example"><span aria-hidden="true"></span><strong>Luz vermelha + som A</strong></div><h3>Um sinal para estudar.</h3><p>Um exemplo de como uma combinação pode ser relacionada a uma atividade. A associação precisa fazer sentido para quem usa.</p></article>
+        </div>
+        <ul class="sales-barriers" data-reveal><li><span>01</span><div><h3>Transições inesperadas</h3><p>Uma mudança pode precisar de uma referência mais clara.</p></div></li><li><span>02</span><div><h3>Horários abstratos</h3><p>Uma pista visual ou sonora oferece outro modo de perceber o momento.</p></div></li><li><span>03</span><div><h3>Lembretes frequentes</h3><p>O projeto explora referências consistentes para acompanhar o dia.</p></div></li></ul>
+      </section>
+
+      <section id="ideia" class="sales-section sales-how section-shell" aria-labelledby="idea-title">
+        <header class="sales-heading" data-reveal><div><p class="eyebrow">02 / Como funciona a proposta</p><h2 id="idea-title">Do horário à<br /><em>próxima atividade.</em></h2></div><p class="sales-lead">Tempo → sinal → reconhecimento → atividade. Uma sequência simples orienta a ideia, com repetição e apoio de familiares ou educadores.</p></header>
+        <ol class="sales-chain" data-reveal><li><span>01 / TEMPO</span><h3>Organizar o momento</h3><p>Na proposta, atividades e horários compõem uma rotina que pode ser adaptada à pessoa.</p></li><li><span>02 / SINAL</span><h3>Apresentar uma referência</h3><p>Uma combinação de luz e som indica um momento da rotina.</p></li><li><span>03 / RECONHECIMENTO</span><h3>Criar familiaridade</h3><p>Com orientação e repetição, a associação pode se tornar reconhecível.</p></li><li><span>04 / ATIVIDADE</span><h3>Acompanhar o que vem</h3><p>A referência pode apoiar a compreensão da próxima etapa, no ritmo de cada pessoa.</p></li></ol>
+      </section>
+
+      <section id="explorar" class="sales-section sales-demo section-shell" aria-labelledby="sequence-title">
+        <section id="sequencia" class="sequence-section" aria-labelledby="sequence-title">
+          <div class="sequence-copy" data-reveal>
+            <p class="eyebrow">03 / Demonstração interativa</p>
+            <h2 id="sequence-title">Uma cor.<br />Um som.<br /><em>Um momento.</em></h2>
+            <p>Escolha uma atividade e veja sua referência de luz e som. Use os controles para avançar entre os exemplos.</p>
+            <p class="sequence-disclaimer" id="sequence-disclaimer"><strong>Associações ilustrativas.</strong> As cores não têm significados universais. A personalização de horários, sons e atividades faz parte da proposta; o protótipo atual demonstra uma sequência programada de sinais.</p>
+          </div>
+          <div class="sequence-stage" data-reveal data-delay="100" aria-describedby="sequence-disclaimer sequence-audio-note">
+            <div class="sequence-meta"><span>SUA ROTINA, EM SINAIS</span><span>EXEMPLO ILUSTRATIVO</span></div>
+            <ol class="sequence-steps" aria-label="Exemplos de associações entre cores, sons e atividades">
+              <li data-step="0" data-color-name="Vermelho">
+                <button class="sequence-select" type="button" aria-pressed="true" aria-label="Exemplo 1: Vermelho, estudar, som A">
+                  <span class="sequence-number">01 / SOM A</span><span class="sequence-light light-red" aria-hidden="true"></span><span class="sequence-label">Vermelho</span><span class="sequence-activity">Estudar</span>
+                </button>
+              </li>
+              <li data-step="1" data-color-name="Amarelo">
+                <button class="sequence-select" type="button" aria-pressed="false" aria-label="Exemplo 2: Amarelo, descansar, som B">
+                  <span class="sequence-number">02 / SOM B</span><span class="sequence-light light-yellow" aria-hidden="true"></span><span class="sequence-label">Amarelo</span><span class="sequence-activity">Descansar</span>
+                </button>
+              </li>
+              <li data-step="2" data-color-name="Verde">
+                <button class="sequence-select" type="button" aria-pressed="false" aria-label="Exemplo 3: Verde, brincar, som C">
+                  <span class="sequence-number">03 / SOM C</span><span class="sequence-light light-green" aria-hidden="true"></span><span class="sequence-label">Verde</span><span class="sequence-activity">Brincar</span>
+                </button>
+              </li>
+              <li data-step="3" data-color-name="Azul">
+                <button class="sequence-select" type="button" aria-pressed="false" aria-label="Exemplo 4: Azul, próxima atividade, som D">
+                  <span class="sequence-number">04 / SOM D</span><span class="sequence-light light-blue" aria-hidden="true"></span><span class="sequence-label">Azul</span><span class="sequence-activity">Próxima atividade</span>
+                </button>
+              </li>
+              <li data-step="4" data-color-name="Branco">
+                <button class="sequence-select" type="button" aria-pressed="false" aria-label="Exemplo 5: Branco, outra atividade, som E">
+                  <span class="sequence-number">05 / SOM E</span><span class="sequence-light light-white" aria-hidden="true"></span><span class="sequence-label">Branco</span><span class="sequence-activity">Outra atividade</span>
+                </button>
+              </li>
+            </ol>
+            <div class="sequence-current" aria-hidden="true"><span>AGORA, NO EXEMPLO</span><strong id="sequence-current-activity">Estudar</strong><span id="sequence-current-signal">Luz vermelha · Som A</span></div>
+            <p class="sequence-readout" id="sequence-readout" role="status" aria-live="polite" aria-atomic="true">Exemplo 1 de 5: vermelho, som A, estudar.</p>
+            <div class="sequence-controls" role="group" aria-label="Controles da demonstração de sinais">
+              <button type="button" class="step-button" id="sequence-previous" aria-label="Etapa anterior">← <span>Anterior</span></button>
+              <button type="button" class="sequence-play" id="sequence-play" aria-pressed="false"><span aria-hidden="true">▶</span> Reproduzir sequência</button>
+              <button type="button" class="step-button" id="sequence-next" aria-label="Próxima etapa"><span>Próxima</span> →</button>
+            </div>
+            <div class="sequence-audio">
+              <button type="button" id="sequence-audio-toggle" aria-pressed="false" aria-describedby="sequence-audio-note"><span aria-hidden="true">♪</span> Ativar áudio</button>
+              <p id="sequence-audio-note" role="status" aria-live="polite">Áudio desligado. Os sons desta demonstração são ilustrativos, não gravações do buzzer real.</p>
+            </div>
+
+            <p class="sequence-motion-note" id="sequence-motion-note" hidden>Movimento reduzido: selecione cada atividade ou use os controles Anterior e Próxima.</p>
+            <p class="sequence-hardware-note">Horários ilustrativos. Esta simulação não dispara alarmes nem aciona o dispositivo.</p>
+          </div>
+
+        </section>
+
+      </section>
+
+      <section id="prototipo" class="sales-section sales-prototype section-shell" aria-labelledby="model-title">
+        <div class="model-heading" data-reveal>
+          <div class="section-index"><span>04</span><span>O protótipo</span></div>
+          <div>
+            <p class="eyebrow">Representação tridimensional aproximada</p>
+            <h2 id="model-title">Veja a montagem<br /><em>por outros ângulos.</em></h2>
+            <p class="model-intro">Segure e arraste para girar. Solte para sentir a inércia. Clique nas peças para descobrir suas funções.</p>
+          </div>
+        </div>
+
+
+        <dl class="sales-specs" aria-label="Composição do protótipo físico" data-reveal><div><dt>Referência visual</dt><dd>Cinco LEDs coloridos</dd></div><div><dt>Referência sonora</dt><dd>Um buzzer</dd></div><div><dt>Construção atual</dt><dd>Caixa, protoboard e fios</dd></div></dl>
+
+        <div class="model-layout">
+          <figure class="model-figure" data-reveal data-delay="80">
+            <div class="model-viewer" id="model-viewer" data-state="poster" aria-describedby="model-controls-help">
+              <img class="model-poster" src="assets/prototype/photos/model-fallback-top.webp" alt="Vista superior real do protótipo: cinco LEDs e fios coloridos estão montados numa protoboard sobre a superfície vermelha; o buzzer fica ao lado." width="1200" height="1130" loading="lazy" decoding="async" />
+              <div class="model-canvas" id="model-canvas"></div>
+              <p class="model-status" id="model-status" role="status" aria-live="polite"></p>
+            </div>
+            <div class="model-toolbar">
+              <p id="model-controls-help" class="model-controls-help">Arraste sobre o produto. No celular, use dois dedos para zoom. Teclado: setas, +/− e Home. Role a página pelas margens.</p>
+              <div class="model-controls" role="group" aria-label="Controles para explorar o modelo 3D">
+                <button type="button" data-camera="left" aria-label="Girar para a esquerda" disabled><span aria-hidden="true">←</span></button>
+                <button type="button" data-camera="right" aria-label="Girar para a direita" disabled><span aria-hidden="true">→</span></button>
+                <button type="button" data-camera="up" aria-label="Inclinar para cima" disabled><span aria-hidden="true">↑</span></button>
+                <button type="button" data-camera="down" aria-label="Inclinar para baixo" disabled><span aria-hidden="true">↓</span></button>
+                <button type="button" data-camera="zoom-in" aria-label="Aproximar" disabled><span aria-hidden="true">+</span></button>
+                <button type="button" data-camera="zoom-out" aria-label="Afastar" disabled><span aria-hidden="true">−</span></button>
+                <button type="button" class="reset-view" data-camera="reset" disabled>Voltar ao início</button>
+              </div>
+            </div>
+            <div class="model-demo-controls"><button type="button" id="model-demo" aria-pressed="false" disabled>Simular LEDs</button><p>Sequência ilustrativa configurável, sem som. Não representa a programação definitiva.</p></div>
+
+          </figure>
+
+          <aside class="component-panel" aria-labelledby="component-title" data-reveal data-delay="160">
+            <p class="eyebrow">Por dentro da ideia</p>
+            <h3 id="component-title">Cada peça tem uma função.</h3>
+            <div class="component-detail" aria-live="polite" aria-atomic="true">
+              <button id="component-close" class="component-close" type="button" aria-label="Fechar informações e remover destaque" hidden>Fechar ×</button>
+              <p class="component-detail-title" id="component-detail-title">Escolha um componente</p>
+              <p class="component-detail-copy" id="component-detail-copy">Clique em uma peça do modelo ou escolha na lista para conhecer sua função.</p>
+              <div id="component-details" hidden>
+                <p class="component-detail-label">Função eletrônica</p><p id="component-role" class="component-detail-copy"></p>
+                <p class="component-detail-label">No Incluir Mais Agenda</p><p id="component-project" class="component-detail-copy"></p>
+              </div>
+            </div>
+            <div class="component-list" id="component-list" aria-label="Componentes do protótipo"><p class="component-note">Carregue esta seção para explorar as peças.</p></div>
+            <p class="component-note">Seleção direta na geometria. Valores elétricos e ligações não confirmados não são especificados.</p>
+          </aside>
+        </div>
+
+        <div id="processo" class="sales-gallery" aria-label="Duas perspectivas do protótipo">
+        <div class="photo-grid photo-grid-studio">
+          <figure class="photo-card" data-reveal>
+            <img src="assets/prototype/photos/studio-profissional-frente.webp" alt="Imagem de apresentação refinada com IA a partir de uma foto do protótipo com painel branco e lateral roxa, topo vermelho, protoboard, cinco LEDs, fios e buzzer." width="1536" height="1024" loading="lazy" decoding="async" />
+
+          </figure>
+          <figure class="photo-card" data-reveal>
+            <img src="assets/prototype/photos/studio-profissional-extremidade.webp" alt="Protótipo visto pela extremidade roxa em primeiro plano, com a extremidade amarela ao fundo. Sobre o topo vermelho estão a protoboard, cinco LEDs coloridos, fios e um buzzer preto. Imagem de apresentação refinada com IA a partir de uma foto real." width="1448" height="1086" loading="lazy" decoding="async" />
+
+          </figure>
+        </div>
+        </div>
+      </section>
+
+      <section id="personalizacao" class="sales-section sales-personalization section-shell" aria-labelledby="personalization-title">
+        <header class="sales-heading" data-reveal><div><p class="eyebrow">05 / Um projeto em desenvolvimento</p><h2 id="personalization-title">Ajustado a quem usa.<br /><em>Não o contrário.</em></h2></div><p class="sales-lead">Não existe uma cor certa para cada atividade. A personalização faz parte da proposta do produto, e a demonstração permite experimentar essa ideia sem alterar o protótipo físico.</p></header>
+        <div class="sales-status-grid" data-reveal>
+          <article><p class="sales-badge sales-badge-current">NO PROTÓTIPO ATUAL</p><h3>O princípio já ganha forma.</h3><ul><li><strong>Sequência de sinais</strong><span>Acionamento programado de luzes e avisos sonoros.</span></li><li><strong>Cinco referências visuais</strong><span>LEDs vermelho, amarelo, verde, azul e branco.</span></li><li><strong>Construção experimental</strong><span>Protoboard, resistores, fios e buzzer reunidos em uma caixa artesanal.</span></li></ul></article>
+          <article class="sales-planned"><p class="sales-badge">PROPOSTA DE EVOLUÇÃO</p><h3>Combinações que façam sentido.</h3><ul><li><strong>Associações personalizáveis</strong><span>Escolher a relação entre cor, som e atividade.</span></li><li><strong>Horários e rotina</strong><span>Configurar momentos do dia conforme as necessidades individuais.</span></li><li><strong>Preferências sensoriais</strong><span>Investigar ajustes de volume, brilho e duração dos sinais com usuários.</span></li></ul></article>
+        </div>
+        <div id="proximos-passos" class="sales-roadmap" data-reveal><div><p class="eyebrow">O próximo passo é escutar</p><h3>O desenvolvimento continua com as pessoas.</h3><p>A avaliação com usuários é uma próxima etapa a planejar. Ainda não há resultados de validação para apresentar.</p></div><ol><li><span>Agora</span><strong>Protótipo de bancada</strong></li><li><span>Próxima etapa</span><strong>Escuta e avaliação de uso</strong></li><li><span>Planejado</span><strong>Personalização e ajustes</strong></li></ol></div>
+      </section>
+
+      <section id="publico" class="sales-section sales-audience section-shell" aria-labelledby="audience-title">
+        <header class="sales-heading" data-reveal><div><p class="eyebrow">06 / Para quem a ideia foi pensada</p><h2 id="audience-title">Diferentes maneiras de<br /><em>compreender a rotina.</em></h2></div><p class="sales-lead">O uso deve considerar as necessidades, preferências e sensibilidades de cada pessoa. O projeto explora uma ferramenta de apoio, sem propor uma solução universal.</p></header>
+        <div class="sales-audience-grid" data-reveal><article><span>PREVISIBILIDADE</span><h3>Crianças com TEA e outras pessoas neurodivergentes</h3><p>Para explorar referências consistentes nas transições entre atividades, conforme as necessidades individuais.</p></article><article><span>MAIS DE UM CANAL</span><h3>Pessoas com deficiência visual</h3><p>Os sinais sonoros são uma possibilidade a avaliar como referência complementar à informação visual.</p></article><article><span>APOIO NO DIA A DIA</span><h3>Famílias, responsáveis e educadores</h3><p>Para pensar juntos em formas de comunicar os momentos da rotina e acompanhar o aprendizado das associações.</p></article></div>
+        <div id="acessibilidade" class="sales-access" data-reveal><h3>A forma de experimentar também importa.</h3><ul><li><strong>Cor com texto</strong><span>Todos os sinais têm identificação escrita.</span></li><li><strong>Som por escolha</strong><span>Áudio desligado por padrão, com opção de ativar e desativar.</span></li><li><strong>Movimento sob controle</strong><span>Sem piscadas rápidas e com respeito ao movimento reduzido.</span></li></ul><p>Os benefícios são pretendidos, não resultados clínicos comprovados. O produto não substitui acompanhamento profissional.</p></div>
+      </section>
+
+      <section class="sales-closing section-shell" aria-labelledby="closing-title" data-reveal><p class="eyebrow">Incluir Mais Agenda</p><h2 id="closing-title">Uma rotina.<br /><em>Mais formas de compreender.</em></h2><p>Experimente as combinações e descubra como uma referência pode ganhar significado.</p><div class="sales-closing-actions"><a class="button button-dark" href="#explorar">Experimentar os sinais <span aria-hidden="true">↗</span></a><a class="button hero-secondary" href="index.html">Conhecer o Incluir+ <span aria-hidden="true">→</span></a></div></section>
+    </main>
+
+    <footer class="sales-footer section-shell"><a class="wordmark" href="index.html" aria-label="Incluir+, página inicial"><span class="wordmark-mark" aria-hidden="true">+</span><span>incluir<span class="wordmark-plus">mais</span></span></a><p>Tecnologia assistiva em desenvolvimento.</p><nav aria-label="Links do rodapé"><a href="#explorar">Demonstração</a><a href="#personalizacao">O projeto</a><a href="#publico">Para quem</a></nav></footer>
+  </body>
+</html>

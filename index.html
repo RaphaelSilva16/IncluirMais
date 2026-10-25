@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incluir+</title>
+    <meta
+      name="description"
+      content="Incluir+ é uma agenda virtual inclusiva para organizar rotina, atividades e compromissos de forma simples e acessível."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230f5c5a'/%3E%3Cpath d='M16 8v16M8 16h16' stroke='white' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <script src="theme.js" defer></script>
+    <script src="kinetic-grid.js" defer></script>
+  </head>
+  <body>
+    <canvas id="kinetic-grid" aria-hidden="true"></canvas>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="topbar">
+      <div class="container nav">
+        <a class="brand" href="index.html" aria-label="Incluir+, página inicial"><span class="brand-mark">+</span>Incluir</a>
+        <nav class="menu" aria-label="Menu principal">
+          <a href="#sobre">Como funciona</a>
+          <a href="#beneficios">Benefícios</a>
+          <a href="turma.html">Nossa turma</a>
+          <a class="nav-cta" href="agenda.html">Abrir agenda <span aria-hidden="true">↗</span></a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Alternar tema">🌙</button>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <p class="eyebrow"><span></span> Planejamento inclusivo</p>
+            <p class="hero-kicker">Uma rotina clara começa aqui</p>
+            <h1>Organize o dia com mais <em>clareza</em> e autonomia.</h1>
+            <p class="lead">
+              Uma agenda visual e acolhedora para transformar compromissos em uma
+              sequência mais previsível, compreensível e tranquila.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="agenda.html">Organizar minha rotina <span aria-hidden="true">→</span></a>
+              <a class="btn btn-ghost" href="incluir-mais-agenda.html">Conheça a Incluir Mais Agenda <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="trust-line" aria-label="Destaques do Incluir+">
+              <div><strong>01</strong><span>Visão visual<br />do dia</span></div>
+              <div><strong>02</strong><span>Alertas<br />personalizados</span></div>
+              <div><strong>03</strong><span>Ritmo que<br />acolhe</span></div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="visual-label"><span></span> VISÃO DA ROTINA</div>
+            <div class="floating-card floating-card-top"><span>◷</span><div><small>Próxima atividade</small><strong>Hora da leitura</strong></div></div>
+            <div class="floating-card floating-card-bottom"><span>✓</span><div><small>Etapa concluída</small><strong>Muito bem!</strong></div></div>
+            <img
+              src="hero-illustration.svg"
+              data-light-src="hero-illustration.svg"
+              data-dark-src="hero-illustration-dark.svg"
+              alt="Ilustração de uma agenda visual com atividades organizadas ao longo do dia, representando rotina, clareza e acolhimento."
+              width="720"
+              height="720"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="problema" class="about">
+        <div class="container">
+          <div class="section-heading"><p class="eyebrow"><span></span> O problema</p><h2>Quando o dia não está claro, cada próxima tarefa pode pesar.</h2><p class="section-intro">Estudar, lembrar compromissos e acompanhar mudanças exige organização — e cada pessoa precisa de apoios diferentes.</p></div>
+          <div class="about-grid">
+            <div class="problem-copy">
+              <p>Muitos estudantes lidam com ansiedade, distrações ou esquecimentos enquanto tentam acompanhar uma rotina cheia de tarefas. Isso pode tornar mais difícil planejar o estudo, o descanso e os compromissos.</p>
+              <p>Ferramentas com excesso de informação ou pouca flexibilidade também podem não atender às necessidades de quem precisa de mais previsibilidade e simplicidade. O Incluir+ parte dessa escuta e propõe uma experiência visual, calma e personalizável.</p>
+            </div>
+            <aside class="about-highlight" aria-label="Dado sobre saúde mental na adolescência"><span class="stat-number">1 em 7</span><p>adolescentes de 10 a 19 anos vive com algum transtorno mental, segundo estimativa global da Organização Mundial da Saúde.</p><a href="https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health" target="_blank" rel="noopener noreferrer">Fonte: OMS, Saúde mental dos adolescentes ↗</a></aside>
+          </div>
+          <div class="solution-band">
+            <div><p class="eyebrow"><span></span> Nossa solução</p><h3>Incluir+ Rotina Inteligente</h3></div>
+            <p>Um aplicativo simples, visual e inclusivo, pensado para apresentar o dia com clareza e sem excesso de estímulos. Ele ajuda a transformar uma rotina confusa em uma sequência mais leve, organizada e possível de seguir — no ritmo de cada pessoa.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre" class="workflow" aria-labelledby="workflow-title">
+        <div class="container">
+          <div class="section-heading"><p class="eyebrow"><span></span> Como funciona</p><h2 id="workflow-title">Três apoios para deixar o dia mais compreensível.</h2><p class="section-intro">Recursos diretos para organizar tarefas, lembrar dos momentos importantes e fazer pausas.</p></div>
+          <div class="how-cards">
+            <article class="how-card"><span class="how-icon" aria-hidden="true">▦</span><span class="how-number">01</span><h3>Rotina visual</h3><p>Monte seu dia com blocos coloridos e veja a sequência de atividades de um jeito fácil de entender.</p></article>
+            <article class="how-card"><span class="how-icon" aria-hidden="true">◷</span><span class="how-number">02</span><h3>Lembretes gentis</h3><p>Receba lembretes para estudar, beber água, fazer uma tarefa ou descansar, no horário que você escolher.</p></article>
+            <article class="how-card"><span class="how-icon" aria-hidden="true">〰</span><span class="how-number">03</span><h3>Pausa para o bem-estar</h3><p>Quando precisar, faça uma pausa breve de respiração. Dois minutos são uma sugestão, e você pode adaptar ao que funciona para você.</p></article>
+          </div>
+          <p class="evidence-note">Rotinas visuais podem ser um apoio útil para algumas pessoas autistas. Cada pessoa é diferente; os recursos do Incluir+ são ferramentas de organização e não substituem acompanhamento profissional. <a href="https://www.cdc.gov/autism/treatment/index.html" target="_blank" rel="noopener noreferrer">Saiba mais: CDC — rotinas diárias e apoios visuais ↗</a></p>
+        </div>
+      </section>
+
+      <section id="beneficios" class="features">
+        <div class="container">
+          <div class="section-heading"><p class="eyebrow"><span></span> Por que funciona</p><h2>Uma interface que respeita a atenção de quem usa.</h2></div>
+          <div class="cards">
+            <article class="card">
+              <span class="feature-icon">⌘</span><span class="feature-number">01</span>
+              <h3>Organização visível</h3>
+              <p>Atividades, horários e observações organizados em uma leitura direta.</p>
+            </article>
+            <article class="card">
+              <span class="feature-icon">◷</span><span class="feature-number">02</span>
+              <h3>Previsibilidade real</h3>
+              <p>Uma sequência consistente para antecipar o que acontece agora e depois.</p>
+            </article>
+            <article class="card">
+              <span class="feature-icon">✦</span><span class="feature-number">03</span>
+              <h3>Autonomia gradual</h3>
+              <p>Pequenos apoios que incentivam participação e construção de hábitos.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing-cta">
+        <div class="container cta-panel">
+          <div>
+            <p class="eyebrow"><span></span> Comece com calma</p>
+            <h2>A próxima parte da rotina pode ser mais leve.</h2>
+          </div>
+          <a class="btn btn-light" href="agenda.html">Criar um compromisso <span>→</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p><strong>Incluir+</strong> <span>•</span> Rotina mais acessível para todos.</p>
+      </div>
+    </footer>
+  </body>
+</html>

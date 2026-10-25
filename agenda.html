@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agenda | Incluir+</title>
+    <meta
+      name="description"
+      content="Agenda pessoal para organizar horários, atividades e compromissos do dia a dia."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230f5c5a'/%3E%3Cpath d='M16 8v16M8 16h16' stroke='white' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <script src="theme.js" defer></script>
+    <script src="kinetic-grid.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <canvas id="kinetic-grid" aria-hidden="true"></canvas>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="topbar">
+      <div class="container nav">
+        <a class="brand" href="index.html" aria-label="Incluir+, página inicial"><span class="brand-mark">+</span>Incluir</a>
+        <nav class="menu" aria-label="Menu principal">
+          <a href="index.html">Início</a>
+          <a href="agenda.html" aria-current="page">Agenda</a>
+          <a href="index.html#sobre">Sobre</a>
+          <a href="index.html#beneficios">Benefícios</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Alternar tema">🌙</button>
+      </div>
+    </header>
+
+    <main id="conteudo" class="agenda-page">
+      <section class="agenda-book-section">
+        <div class="container book-wrapper">
+          <div class="book-panel">
+            <div class="book-header">
+              <p class="eyebrow"><span></span> Espaço de planejamento</p>
+              <h1>Minha agenda</h1>
+              <p>Veja o próximo compromisso e mantenha a rotina em um ritmo confortável.</p>
+              <div class="agenda-status" aria-label="Recursos da agenda"><span><i></i> Alertas ativos</span><span>Visual por etapa</span><span>Foco no agora</span></div>
+            </div>
+
+            <div class="book-navigation">
+                <button id="prev-page" class="nav-btn" type="button" aria-label="Página anterior"><span>←</span> Anterior</button>
+              <span id="page-indicator" class="page-indicator">Página 1 de 1</span>
+                <button id="next-page" class="nav-btn" type="button" aria-label="Próxima página">Próxima <span>→</span></button>
+            </div>
+
+            <div class="page-frame">
+              <div id="agenda-page" class="agenda-page-card" aria-live="polite"></div>
+              <div class="agenda-actions">
+                <button id="edit-current-task" class="btn btn-secondary" type="button">Editar atividade</button>
+                <button id="delete-current-task" class="btn btn-danger" type="button">Excluir compromisso</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="planner-form-section">
+        <div class="container">
+          <div class="planner-form card-panel">
+            <div class="form-heading"><p class="eyebrow"><span></span> Novo compromisso</p><h2 id="form-title">Planeje um momento</h2><p>Inclua apenas o essencial. Você pode ajustar tudo depois.</p></div>
+            <form id="agenda-form">
+              <div class="field-group">
+                <label for="task-title">Atividade</label>
+                <input id="task-title" name="title" type="text" placeholder="Ex.: Escola, banho ou leitura" autocomplete="off" required />
+              </div>
+
+              <div class="field-row planner-details">
+                <div class="field-group calendar-field">
+                  <label for="task-date">Dia</label>
+                  <input id="task-date" name="date" type="hidden" required />
+                  <div class="task-calendar" aria-label="Escolha o dia do compromisso">
+                    <div class="calendar-topbar">
+                      <button id="calendar-prev" class="calendar-nav" type="button" aria-label="Mês anterior">‹</button>
+                      <strong id="calendar-month" aria-live="polite"></strong>
+                      <button id="calendar-next" class="calendar-nav" type="button" aria-label="Próximo mês">›</button>
+                    </div>
+                    <div class="calendar-weekdays" aria-hidden="true">
+                      <span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span>
+                    </div>
+                    <div id="calendar-days" class="calendar-days" role="grid" aria-label="Dias do mês"></div>
+                  </div>
+                  <small id="selected-date-label" class="field-hint"></small>
+                </div>
+
+                <div class="field-group time-field">
+                  <label class="time-label" for="task-hour">Horário</label>
+                  <input id="task-time" name="time" type="hidden" />
+                  <div class="time-entry" role="group" aria-label="Horário no formato de 24 horas">
+                    <input id="task-hour" class="time-part-input" type="text" inputmode="numeric" maxlength="2" placeholder="__" autocomplete="off" required aria-label="Hora, de 00 a 23" aria-describedby="time-hint" />
+                    <span class="time-separator" aria-hidden="true">:</span>
+                    <input id="task-minute" class="time-part-input" type="text" inputmode="numeric" maxlength="2" placeholder="__" autocomplete="off" required aria-label="Minuto, de 00 a 59" aria-describedby="time-hint" />
+                  </div>
+                  <small id="time-hint" class="field-hint">Digite a hora e os minutos. Exemplo: 14:30 (24 horas).</small>
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label for="task-notes">Observações</label>
+                <textarea id="task-notes" name="notes" rows="4" placeholder="Ex: levar lanche, usar fones, repetir instruções"></textarea>
+              </div>
+
+              <div class="field-group">
+                <label for="alarm-sound">Som do alarme</label>
+                <select id="alarm-sound" name="alarmSound" aria-label="Escolha o som do alarme">
+                  <option value="soft-bells">Sinos suaves</option>
+                  <option value="warm-chime">Sino acolhedor</option>
+                  <option value="gentle-piano">Piano delicado</option>
+                  <option value="calm-wave">Onda tranquila</option>
+                </select>
+                <button id="preview-alarm" class="sound-preview-btn" type="button">▷ Ouvir som</button>
+                <small class="field-hint">Toque uma vez para ativar os alertas sonoros neste navegador.</small>
+              </div>
+
+              <div class="field-group">
+                <label for="alert-color">Cor do alerta</label>
+                <div class="alert-color-control">
+                  <input
+                    id="alert-color"
+                    name="alertColor"
+                    type="color"
+                    value="#d93025"
+                    aria-label="Escolha a cor do alerta da agenda"
+                    class="alert-color-input"
+                  />
+                  <div class="color-presets" role="group" aria-label="Cores sugeridas">
+                    <button class="color-preset" type="button" data-color="#ff7a7a" aria-label="Rosa suave" title="Rosa suave"></button>
+                    <button class="color-preset" type="button" data-color="#e7a64c" aria-label="Amarelo dourado" title="Amarelo dourado"></button>
+                    <button class="color-preset" type="button" data-color="#4f9d92" aria-label="Verde água" title="Verde água"></button>
+                    <button class="color-preset" type="button" data-color="#6387d8" aria-label="Azul sereno" title="Azul sereno"></button>
+                    <button class="color-preset" type="button" data-color="#9a72bf" aria-label="Lilás" title="Lilás"></button>
+                  </div>
+                  <label class="custom-color-button" for="alert-color"><span class="color-preview" aria-hidden="true"></span> Outra cor</label>
+                </div>
+                <small id="selected-color-label" class="field-hint">Cor selecionada: Rosa suave</small>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Salvar compromisso <span aria-hidden="true">→</span></button>
+                <button type="button" id="cancel-edit" class="btn btn-secondary hidden">Cancelar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <button id="manual-alert-btn" class="manual-alert-btn" type="button" aria-label="Ativar compromisso atual">
+      ⚑
+    </button>
+
+    <button id="dismiss-alarm-btn" class="dismiss-alarm-btn hidden" type="button" aria-label="Desligar alarme">
+      Desligar alarme
+    </button>
+
+    <footer class="footer">
+      <div class="container">
+        <p><strong>Incluir+</strong> <span>•</span> Rotina mais acessível para todos.</p>
+      </div>
+    </footer>
+  </body>
+</html>

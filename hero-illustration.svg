@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-label="Ilustração abstrata de uma rotina organizada em uma linha do tempo, com blocos de atividades e formas acolhedoras.">
+  <defs>
+    <linearGradient id="heroBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e7f2ee" />
+      <stop offset="0.55" stop-color="#f4f3ee" />
+      <stop offset="1" stop-color="#f8efe3" />
+    </linearGradient>
+    <linearGradient id="heroBlob" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8fc5ac" />
+      <stop offset="1" stop-color="#4f9d92" />
+    </linearGradient>
+    <linearGradient id="heroAccent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e6a06b" />
+      <stop offset="1" stop-color="#cf7d47" />
+    </linearGradient>
+    <linearGradient id="heroPanel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" />
+      <stop offset="1" stop-color="#fbfaf7" />
+    </linearGradient>
+    <filter id="heroShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="26" stdDeviation="30" flood-color="#0e3b36" flood-opacity="0.16" />
+    </filter>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0e3b36" flood-opacity="0.14" />
+    </filter>
+  </defs>
+
+  <rect width="720" height="720" rx="56" fill="url(#heroBg)" />
+
+  <!-- Soft organic background shapes -->
+  <circle cx="548" cy="196" r="238" fill="#dfeee8" opacity="0.9" />
+  <circle cx="548" cy="196" r="238" fill="none" stroke="#cbe3da" stroke-width="1.5" />
+  <circle cx="548" cy="196" r="168" fill="none" stroke="#cbe3da" stroke-width="1.5" opacity="0.7" />
+  <circle cx="142" cy="588" r="128" fill="#f7e6d7" />
+  <circle cx="620" cy="602" r="72" fill="#e4f0ea" />
+
+  <!-- Floating accents -->
+  <circle cx="120" cy="168" r="12" fill="url(#heroBlob)" filter="url(#softShadow)" />
+  <circle cx="180" cy="118" r="7" fill="url(#heroAccent)" />
+  <circle cx="646" cy="410" r="9" fill="url(#heroAccent)" filter="url(#softShadow)" />
+
+  <!-- Timeline / agenda card -->
+  <g transform="rotate(-3 360 360)">
+    <rect x="196" y="126" width="342" height="470" rx="34" fill="url(#heroPanel)" filter="url(#heroShadow)" />
+    <rect x="196" y="126" width="342" height="470" rx="34" fill="none" stroke="#e9e4dc" stroke-width="1.5" />
+
+    <!-- Card header -->
+    <rect x="228" y="162" width="66" height="12" rx="6" fill="#cf7d47" opacity="0.85" />
+    <rect x="228" y="188" width="180" height="16" rx="8" fill="#dbe6e2" />
+    <rect x="228" y="214" width="124" height="10" rx="5" fill="#eceeea" />
+
+    <line x1="228" y1="252" x2="506" y2="252" stroke="#eee9e1" stroke-width="1.5" />
+
+    <!-- Agenda rows -->
+    <g>
+      <circle cx="266" cy="308" r="17" fill="#0f5c5a" />
+      <rect x="300" y="294" width="150" height="13" rx="6.5" fill="#dbe6e2" />
+      <rect x="300" y="314" width="104" height="10" rx="5" fill="#eef1ee" />
+      <rect x="257" y="325" width="18" height="58" rx="9" fill="#e6efeb" />
+    </g>
+    <g>
+      <circle cx="266" cy="392" r="17" fill="#6b9c88" />
+      <rect x="300" y="378" width="168" height="13" rx="6.5" fill="#dbe6e2" />
+      <rect x="300" y="398" width="92" height="10" rx="5" fill="#eef1ee" />
+      <rect x="257" y="409" width="18" height="58" rx="9" fill="#e6efeb" />
+    </g>
+    <g>
+      <circle cx="266" cy="476" r="17" fill="url(#heroAccent)" />
+      <rect x="300" y="462" width="132" height="13" rx="6.5" fill="#dbe6e2" />
+      <rect x="300" y="482" width="118" height="10" rx="5" fill="#eef1ee" />
+      <rect x="257" y="493" width="18" height="58" rx="9" fill="#e6efeb" />
+    </g>
+    <g>
+      <circle cx="266" cy="560" r="17" fill="#0f5c5a" opacity="0.55" />
+      <rect x="300" y="546" width="150" height="13" rx="6.5" fill="#dbe6e2" opacity="0.8" />
+      <rect x="300" y="566" width="80" height="10" rx="5" fill="#eef1ee" />
+    </g>
+  </g>
+
+  <!-- Check badge -->
+  <g filter="url(#softShadow)">
+    <circle cx="556" cy="544" r="46" fill="url(#heroBlob)" />
+    <path d="M536 546 l14 14 l26 -30" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Plus badge -->
+  <g filter="url(#softShadow)">
+    <rect x="118" y="332" width="76" height="76" rx="24" fill="#ffffff" />
+    <rect x="118" y="332" width="76" height="76" rx="24" fill="none" stroke="#ece6dd" stroke-width="1.5" />
+    <path d="M156 352 v36 M138 370 h36" stroke="#0f5c5a" stroke-width="8" stroke-linecap="round" />
+  </g>
+</svg>
