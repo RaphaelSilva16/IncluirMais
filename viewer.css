@@ -7,6 +7,9 @@
 .model-stage-label > span:last-child { margin-left: auto; letter-spacing: .03em; }
 .model-canvas canvas:focus-visible { outline: 3px solid var(--forest); outline-offset: -5px; }
 .model-toolbar { grid-template-columns: 1fr; gap: 12px; }
+.model-retry { justify-self: start; min-height: 44px; padding: 10px 14px; border: 1px solid var(--ring); border-radius: var(--radius); background: var(--card); color: var(--card-foreground); font: inherit; font-size: .8125rem; cursor: pointer; }
+.model-retry[hidden] { display: none; }
+.model-retry:focus-visible { outline: 3px solid var(--ring); outline-offset: 3px; }
 .model-controls-help { max-width: 72ch; }
 .model-controls { justify-content: flex-start; }
 .model-controls button { border-radius: var(--radius); min-width: 42px; min-height: 42px; }

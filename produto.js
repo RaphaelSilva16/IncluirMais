@@ -26,12 +26,21 @@
     if (viewerStarted) return;
     viewerStarted = true;
     try {
-      const { mountProductViewer } = await import('./product-model.bundle.js');
+      const { mountProductViewer } = await import('./product-model.bundle.js?v=eada434c8c73');
       await mountProductViewer({ reducedMotion: reducedMotion.matches });
     } catch (error) {
       console.warn('Não foi possível iniciar o visualizador.', error);
       viewer.dataset.state = 'error';
-      document.querySelector('#model-status').textContent = 'O visualizador não carregou. A foto permanece disponível.';
+      document.querySelector('#model-status').textContent = 'O módulo do modelo 3D não carregou. A imagem de referência do protótipo aparece em seu lugar.';
+      const retryButton = document.querySelector('#model-retry');
+      if (retryButton) {
+        retryButton.hidden = false;
+        retryButton.addEventListener('click', () => {
+          retryButton.hidden = true;
+          viewerStarted = false;
+          startViewer();
+        }, { once: true });
+      }
     }
   }
   if (viewer && 'IntersectionObserver' in window) {
